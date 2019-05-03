@@ -25,7 +25,7 @@ public class Friends {
 	}
 
 	public void setUp() throws IOException {
-		graphDb = GraphDatabase.getDataBaseService();
+		graphDb = GraphDatabaseServiceHolder.getDataBaseService();
 		createNodespace();
 	}
 

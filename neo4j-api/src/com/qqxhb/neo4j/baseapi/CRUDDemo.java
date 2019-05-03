@@ -13,7 +13,7 @@ public class CRUDDemo {
 	private static GraphDatabaseService graphDb;
 
 	public CRUDDemo() throws IOException {
-		graphDb = GraphDatabase.getDataBaseService();
+		graphDb = GraphDatabaseServiceHolder.getDataBaseService();
 	}
 
 	public void create() throws IOException {

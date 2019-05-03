@@ -14,7 +14,7 @@ import org.neo4j.graphdb.schema.Schema;
 public class IndexDemo {
 
     public static void main(String[] args) throws IOException {
-    	GraphDatabaseService graphDb = GraphDatabase.getDataBaseService();
+    	GraphDatabaseService graphDb = GraphDatabaseServiceHolder.getDataBaseService();
         createIndex(graphDb);
         createUser(graphDb);
         updateUser(graphDb, 0);

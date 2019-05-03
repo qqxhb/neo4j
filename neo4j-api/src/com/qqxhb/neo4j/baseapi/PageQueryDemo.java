@@ -17,7 +17,7 @@ public class PageQueryDemo {
 	private GraphDatabaseService graphDb;
 
 	public PageQueryDemo() {
-		graphDb = GraphDatabase.getDataBaseService();
+		graphDb = GraphDatabaseServiceHolder.getDataBaseService();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -39,7 +39,7 @@ public class PageQueryDemo {
 		}
 		System.out.println("page total=" + page.get("totalElements"));
 
-		GraphDatabase.shutDown();
+		GraphDatabaseServiceHolder.shutDown();
 	}
 
 	public Map<String, Object> findPage(Map<String, Object> params) {

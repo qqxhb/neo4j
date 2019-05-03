@@ -5,7 +5,7 @@ import java.io.File;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.factory.GraphDatabaseFactory;
 
-public class GraphDatabase {
+public class GraphDatabaseServiceHolder {
 	private static final File DB_PATH = new File("D:\\neo4j\\data\\databases\\graph.db");
 	private static GraphDatabaseService graphDb;
 
@@ -16,7 +16,7 @@ public class GraphDatabase {
 	 */
 	public static GraphDatabaseService getDataBaseService() {
 		if (graphDb == null) {
-			synchronized (GraphDatabase.class) {
+			synchronized (GraphDatabaseServiceHolder.class) {
 				if (graphDb == null) {
 					graphDb = new GraphDatabaseFactory().newEmbeddedDatabase(DB_PATH);
 					registerShutdownHook(graphDb);

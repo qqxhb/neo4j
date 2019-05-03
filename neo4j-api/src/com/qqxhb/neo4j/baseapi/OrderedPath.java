@@ -24,13 +24,13 @@ public class OrderedPath {
 	private GraphDatabaseService graphDb;
 
 	public OrderedPath() throws IOException {
-		graphDb = GraphDatabase.getDataBaseService();
+		graphDb = GraphDatabaseServiceHolder.getDataBaseService();
 	}
 
 	public static void main(String[] args) throws Exception {
 		OrderedPath op = new OrderedPath();
 		System.out.println(op.printPaths(op.findPaths(), op.createTheGraph()));
-		GraphDatabase.shutDown();
+		GraphDatabaseServiceHolder.shutDown();
 	}
 
 	public Node createTheGraph() {
