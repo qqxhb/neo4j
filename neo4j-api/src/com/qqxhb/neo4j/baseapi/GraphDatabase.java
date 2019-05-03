@@ -27,8 +27,15 @@ public class GraphDatabase {
 	}
 
 	public static void shutDown() {
-		System.out.println("Shutting down database ...");
-		graphDb.shutdown();
+		{
+			try {
+				if (graphDb != null) {
+					graphDb.shutdown();
+				}
+			} finally {
+				graphDb = null;
+			}
+		}
 	}
 
 	/**
