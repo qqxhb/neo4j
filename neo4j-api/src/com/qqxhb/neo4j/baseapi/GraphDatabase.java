@@ -6,7 +6,7 @@ import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.factory.GraphDatabaseFactory;
 
 public class GraphDatabase {
-	private static final File DB_PATH = new File("target/neo4j-db");
+	private static final File DB_PATH = new File("D:\\neo4j\\data\\databases\\graph.db");
 	private static GraphDatabaseService graphDb;
 
 	/**
