@@ -1,5 +1,8 @@
 # neo4j
-图数据库 Neo4j 学习 http://neo4j.com.cn/
+图数据库 Neo4j 学习 
+- 官网 https://neo4j.com/
+- 中文社区 http://neo4j.com.cn/
+- 全面的Neo4j使用指南（翻译） https://cloud.tencent.com/developer/article/1336299
 ###### 它包括如下几个显著特点:
 - 完整的ACID支持
 - 高可用性
