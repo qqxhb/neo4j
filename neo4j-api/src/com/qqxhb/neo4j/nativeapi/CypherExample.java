@@ -1,7 +1,6 @@
 package com.qqxhb.neo4j.nativeapi;
 
 import java.io.File;
-import java.util.HashMap;
 
 import org.neo4j.cypher.internal.javacompat.ExecutionEngine;
 import org.neo4j.cypher.internal.javacompat.GraphDatabaseCypherService;
@@ -19,7 +18,7 @@ public class CypherExample {
 		ExecutionEngine execEngine = new ExecutionEngine(db, null, null);
 		Result execResult;
 		try {
-			execResult = execEngine.executeQuery("MATCH (java:JAVA) RETURN java", new HashMap<String, Object>(), null);
+			execResult = execEngine.executeQuery("MATCH (java:JAVA) RETURN java", null, null);
 			String results = execResult.resultAsString();
 			System.out.println(results);
 		} catch (QueryExecutionKernelException e) {
